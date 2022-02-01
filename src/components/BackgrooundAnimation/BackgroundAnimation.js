@@ -35,7 +35,7 @@ const BackgroundAnimation = () => (
         ry="1.07433"
         fill="#945DD6"
       >
-        <animateMotion dur="10s" repeatCount="indefinite" rotate="auto">
+        <animateMotion dur="5s" repeatCount="indefinite" rotate="auto">
           <mpath xlinkHref="#path_2" />
         </animateMotion>
       </ellipse>
@@ -44,7 +44,7 @@ const BackgroundAnimation = () => (
         transform="translate(-294.685 -193.474) rotate(45 294.685 193.474)"
         stroke="url(#paint3_linear)"
       >
-        <animateMotion dur="10s" repeatCount="indefinite" rotate="auto">
+        <animateMotion dur="5s" repeatCount="indefinite" rotate="auto">
           <mpath xlinkHref="#path_2" />
         </animateMotion>
       </path>
