@@ -7,16 +7,6 @@ import { CompanyContainer, FooterWrapper, LinkColumn, LinkItem, LinkList, LinkTi
 const Footer = () => {
   return (
     <FooterWrapper>
-      <LinkList>
-        <LinkColumn>
-          <LinkTitle>Call</LinkTitle>
-          <LinkItem href="tel: +447824362107">(+44) 7824362107</LinkItem>
-        </LinkColumn>
-        <LinkColumn>
-          <LinkTitle>Email</LinkTitle>
-          <LinkItem href="mailto:aabdidevelopment@gmail.com">aabdidevelopment@gmail.com</LinkItem>
-        </LinkColumn>
-      </LinkList>
       <SocialIconsContainer>
         <CompanyContainer>
           <Slogan>“Imagination is the beginning of creation. You imagine what you desire, you will what you imagine, and at last, you create what you will.” <br /><br />George Bernard Shaw</Slogan>
