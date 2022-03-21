@@ -1,11 +1,11 @@
 export const projects = [
   {
-    title: 'MERN Memories',
-    description: "Using React, Node.js, Express & MongoDB you'll learn how to build a Full Stack MERN Application - from start to finish. The App is called Memories and it is a simple social media app that allows users to post interesting events that happened in their lives.",
-      image: '/images/1.png',
-      tags: ['Mongo', 'Express', 'React', 'Node'],
-    source: 'https://google.com',
-    visit: 'https://google.com',
+    title: 'Geolocation App',
+    description: "Using Javascript, PHP, Leaflet Maps, Bootstrap and Multiple API's this app displays visual data based on a specific location.",
+    image: 'https://user-images.githubusercontent.com/79595630/159283958-02d96a1e-a786-4c46-af06-8efcdac86a8f.png',
+    tags: ['Javascript', 'PHP', 'Bootstrap'],
+    source: 'https://github.com/aunabdi1993/ICTS-Projects',
+    visit: 'https://geolocationapp-gazeteer.herokuapp.com/',
     id: 0,
   },
   {
