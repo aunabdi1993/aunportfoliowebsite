@@ -9,12 +9,12 @@ export const projects = [
     id: 0,
   },
   {
-    title: 'E-Commerce',
-    description:"While building it you're going to learn many advanced React & JavaScript topics, as well as how to use Stripe for card transactions. On top of that, at the end of the video, you will have this unique and complex webshop app that you will be able to add to your portfolio. And trust me, e-commerce applications are impressive.",
-    image: '/images/2.png',
-    tags: ['React', 'JavaScript'],
-    source: 'https://google.com',
-    visit: 'https://google.com',
+    title: 'Todo App',
+    description:"Production-ready Todo application with React, Next, and Supabase. Add, Update & Delete Todo's with Authentication",
+    image: 'https://user-images.githubusercontent.com/79595630/159498459-9632305f-9238-4100-862c-39ecf7bdf8fc.png',
+    tags: ['React.js', 'Next.js', 'Supabase'],
+    source: 'https://github.com/aunabdi1993/todo_app',
+    visit: 'https://todo-app-chi-seven.vercel.app/signin',
     id: 1,
   },
   {
