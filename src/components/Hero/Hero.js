@@ -17,7 +17,7 @@ const Hero = (props) => (
       <SectionText>
         I'm a Full-Stack Developer aspiring to create the most beautiful and well-structured web applications possible. 
       </SectionText>
-      <Button onClick={() => window.location = ''}>
+      <Button onClick={() => window.location = '#projects'}>
         Learn More
       </Button>
     </LeftSection>

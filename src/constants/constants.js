@@ -1,9 +1,9 @@
 export const projects = [
   {
-    title: 'Geolocation App',
+    title: 'Gazeteer',
     description: "Using Javascript, PHP, Leaflet Maps, Bootstrap and Multiple API's this app displays visual data based on a specific location.",
-    image: 'https://user-images.githubusercontent.com/79595630/159283958-02d96a1e-a786-4c46-af06-8efcdac86a8f.png',
-    tags: ['Javascript', 'PHP', 'Bootstrap'],
+    image: 'https://user-images.githubusercontent.com/79595630/160298423-d5e86db3-5a66-42d3-a61c-8a96bf345420.png',
+    tags: ['Javascript', 'PHP', 'REST API'],
     source: 'https://github.com/aunabdi1993/ICTS-Projects',
     visit: 'https://geolocationapp-gazeteer.herokuapp.com/',
     id: 0,
