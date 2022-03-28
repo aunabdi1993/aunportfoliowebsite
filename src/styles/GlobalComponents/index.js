@@ -279,3 +279,43 @@ export const LinkIconImg = styled.div`
     height: ${({ large }) => large ? '32px' : '16px'};
   }
 `
+
+export const FormGroup = styled.div`
+	color: white;
+  display: block;
+	width: 100%;
+`;
+
+export const Label = styled.label`
+  color: white;
+	margin-bottom: 0.5em;
+    display: block;
+`;
+
+
+export const Input = styled.input`
+	padding: 0.5em;
+	color: black;
+	background: white;
+	border: none;
+	border-radius: 3px;
+	width: 100%;
+	margin-bottom: 2em;
+`;
+export const MessageInput = styled.input`
+	padding: 0.5em;
+  margin-bottom: 2em;
+	color: black;
+	background: white;
+	border: none;
+	border-radius: 3px;
+	width: 100%;
+`;
+
+
+export const Message = styled.label`
+	margin-bottom: 0.5em;
+	color: white;
+  display: block;
+`;
+
