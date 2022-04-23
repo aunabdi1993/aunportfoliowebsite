@@ -16,6 +16,15 @@ export const projects = [
     source: 'https://github.com/aunabdi1993/companydirectory',
     visit: 'https://company-directory-aunabdi.herokuapp.com/',
     id: 1,
+  },
+  {
+    title: 'Basic Todo List',
+    description:"This is a basic todo list app that allows the user to add, delete and edit tasks.",
+    image: 'https://user-images.githubusercontent.com/79595630/159517973-580cd62b-b380-4dd2-b85f-e1fb464e2fb6.png',
+    tags: ['React', 'Javascript'],
+    source: 'https://github.com/aunabdi1993/react-to-do-list',
+    visit: 'https://aunabdi1993.github.io/react-to-do-list/',
+    id: 2,
   }
 ];
 
