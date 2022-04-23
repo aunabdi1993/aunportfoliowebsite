@@ -9,12 +9,12 @@ export const projects = [
     id: 0,
   },
   {
-    title: 'Todo App',
-    description:"Production-ready Todo application with React, Next, and Supabase. Add, Update & Delete Todo's with Authentication",
-    image: 'https://user-images.githubusercontent.com/79595630/159498459-9632305f-9238-4100-862c-39ecf7bdf8fc.png',
-    tags: ['React.js', 'Next.js', 'Supabase'],
-    source: 'https://github.com/aunabdi1993/todo_app',
-    visit: 'https://todo-app-chi-seven.vercel.app/signin',
+    title: 'Company Directory',
+    description:"This app allows the user to search the directory for personnel, location and department information.",
+    image: 'https://user-images.githubusercontent.com/79595630/164878083-8d4c4522-0ead-415d-9ffe-768549220d96.png',
+    tags: ['SQL', 'PHP', 'Javascript', 'Bootstrap'],
+    source: 'https://github.com/aunabdi1993/companydirectory',
+    visit: 'https://company-directory-aunabdi.herokuapp.com/',
     id: 1,
   }
 ];
