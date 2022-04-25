@@ -21,10 +21,19 @@ export const projects = [
     title: 'Basic Todo List',
     description:"This is a basic todo list app that allows the user to add, delete and edit tasks.",
     image: 'https://user-images.githubusercontent.com/79595630/159517973-580cd62b-b380-4dd2-b85f-e1fb464e2fb6.png',
-    tags: ['React', 'Javascript'],
+    tags: ['React.js', 'Javascript'],
     source: 'https://github.com/aunabdi1993/react-to-do-list',
     visit: 'https://aunabdi1993.github.io/react-to-do-list/',
     id: 2,
+  },
+  {
+    title: 'Bookstore',
+    description:"React.js bookstore made using Material UI and Commerce.js",
+    image: 'https://user-images.githubusercontent.com/79595630/165070749-d88ef590-de61-4d8a-b7aa-942f498ee9aa.png',
+    tags: ['React.js', 'Commerce.js', 'Javascript', 'Material UI'],
+    source: 'https://github.com/aunabdi1993/book-store',
+    visit: 'https://book-store-aunabdi.vercel.app/',
+    id: 3,
   }
 ];
 
