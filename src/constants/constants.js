@@ -11,7 +11,7 @@ export const projects = [
   {
     title: 'Company Directory',
     description:"This app allows the user to search the directory for personnel, location and department information.",
-    image: 'https://user-images.githubusercontent.com/79595630/164878083-8d4c4522-0ead-415d-9ffe-768549220d96.png',
+    image: 'https://user-images.githubusercontent.com/79595630/165549114-24538e79-b26d-4191-b9ff-aee44f1ec22e.png',
     tags: ['SQL', 'PHP', 'Javascript', 'Bootstrap'],
     source: 'https://github.com/aunabdi1993/companydirectory',
     visit: 'https://company-directory-aunabdi.herokuapp.com/',

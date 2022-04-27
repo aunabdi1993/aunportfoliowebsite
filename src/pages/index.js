@@ -5,7 +5,6 @@ import Projects from '../components/Projects/Projects';
 import Technologies from '../components/Technologies/Technologies';
 import Timeline from '../components/TimeLine/TimeLine';
 import Contact from '../components/Contact/Contact'
-import ContactForm from '../components/Contact/ContactForm';
 import { Layout } from '../layout/Layout';
 import { Section } from '../styles/GlobalComponents';
 
