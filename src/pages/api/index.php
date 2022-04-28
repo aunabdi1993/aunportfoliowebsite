@@ -3,18 +3,15 @@ header("Access-Control-Allow-Origin: *");
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require '../../../PHPMailer-master/src/Exception.php';
-require '../../../PHPMailer-master/src/PHPMailer.php';
-require '../../../PHPMailer-master/src/SMTP.php';
-
 // get refferer server
 if($_SERVER['HTTP_REFERER'] === "http://localhost:3000/"){
     // extract the data from $_POST
-    $name = isset($_GET['name']) ? $_GET['name'] : null;
+    $fname = isset($_GET['fname']) ? $_GET['fname'] : null;
+    $lname = isset($_GET['lname']) ? $_GET['lname'] : null;
     $message = isset($_GET['message']) ? $_GET['message'] : null;
     $email = isset($_GET['sendto']) ? $_GET['sendto'] : null;
 
-    if($name && $message && $email){
+    if($fname && $lname && $message && $email){
     
         //Load composer's autoloader
         require 'vendor/autoload.php';
@@ -25,20 +22,20 @@ if($_SERVER['HTTP_REFERER'] === "http://localhost:3000/"){
             $mail->isSMTP();                                      // Send using SMTP
             $mail->Host       = 'smtp.gmail.com';                // Set the SMTP server to send through
             $mail->SMTPAuth   = true;                             // Enable SMTP authentication
-            $mail->Username   = '';           // SMTP username
-            $mail->Password   = '';                        // SMTP password
+            $mail->Username   = 'aabdidevelopment@gmail.com';    // SMTP username
+            $mail->Password   = 'Imamhussain20!';                      // SMTP password
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` also accepted
             $mail->Port       = 587;
 
             // Recipients
-            $mail->setFrom('mitrodigitalsmtp@gmail.com', 'React Contact form');
+            $mail->setFrom('aabdidevelopment@gmail.com', 'Contact form');
             $mail->addAddress($email);     // Add a recipient
-            $mail->addReplyTo('mitrodigitalsmtp@gmail.com', 'Information');
+            $mail->addReplyTo('aabdidevelopment@gmail.com', 'Information');
 
             // Content
             $mail->isHTML(true);      // Set email format to HTML
-            $mail->Subject = 'React Contact form';
-            $mail->Body    = 'Name: ' . $name . '<br />Email: ' . $email . '<br /><br /><b>Message:</b> '
+            $mail->Subject = 'Contact form';
+            $mail->Body = 'First Name: ' . $fname . '<br />Last Name' . $lname .  '<br />Email: ' . $email . '<br /><br /><b>Message:</b> '
             . $message;
 
             if($mail->send())

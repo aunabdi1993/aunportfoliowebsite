@@ -44,7 +44,7 @@ class contact extends React.Component {
 
     });
 
-    xhr.open('GET', 'http://api.ruviuctor.com/sendemail/index.php?sendto=' + email + '&fname=' + fname + '&lname=' + lname + '&message=' + message);
+    xhr.open('GET', 'http://aunabdi.dev/index.php?sendto=' + email + '&fname=' + fname + '&lname=' + lname + '&message=' + message);
 
     // Send the request
     xhr.send();
