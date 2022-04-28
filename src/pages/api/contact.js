@@ -7,7 +7,7 @@ export default function (req, res) {
     host: "smtp.gmail.com",
     auth: {
       user: "aadevwebsite@gmail.com",
-      pass: process.env.password,
+      pass: "aadevwebsite123!",
     },
     secure: true,
   });
