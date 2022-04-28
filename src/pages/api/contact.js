@@ -1,5 +1,3 @@
-import { password } from "pg/lib/defaults";
-
 require('dotenv').config();
 
 export default function (req, res) {
