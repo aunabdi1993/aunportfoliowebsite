@@ -56,9 +56,7 @@ class contact extends React.Component {
       },
       body: JSON.stringify(data)
     }).then((res) => {
-      console.log('Response received')
       if (res.status === 200) {
-        console.log('Response succeeded!')
         fetch('/api/contact', {
     method: 'POST',
     headers: {
@@ -67,7 +65,6 @@ class contact extends React.Component {
     },
     body: JSON.stringify(data)
   }).then((res) => {
-    console.log('Response received')
     if (res.status === 200) {
       Swal.fire(
         'Thank you!',
