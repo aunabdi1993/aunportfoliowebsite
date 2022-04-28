@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import axios from 'axios';
+import axios from "axios";
 
 import {
   Section,
@@ -17,13 +17,39 @@ class contact extends React.Component {
       email: "",
       message: "",
       mailSent: false,
-      error: null
+      error: null,
     };
   }
 
+  // HANDLE CHANGE
+
+  handleChange = (input) => (e) => {
+    this.setState({
+      [input]: e.target.value,
+    });
+  };
+
+  // SUBMIT FORM
+
   handleFormSubmit(event) {
+    // console.log(this.state);
+
+    // Create a new XMLHttpRequest
+    const xhr = new XMLHttpRequest();
+
+    // Get the callback when the server responds
+    xhr.addEventListener("load", () => {
+      // Update the email Status with the response
+      console.log(xhr.responseText);
+
+    });
+
+    xhr.open('GET', 'http://api.ruviuctor.com/sendemail/index.php?sendto=' + email + '&fname=' + fname + '&lname=' + lname + '&message=' + message);
+
+    // Send the request
+    xhr.send();
+
     event.preventDefault();
-    console.log(this.state);
   }
 
   render() {
