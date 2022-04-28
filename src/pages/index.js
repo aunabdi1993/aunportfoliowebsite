@@ -7,9 +7,6 @@ import Contact from '../components/Contact/Contact'
 import { Layout } from '../layout/Layout';
 import { Section } from '../styles/GlobalComponents';
 
-console.log(process.env.REACT_APP_GMAIL_USERNAME);
-console.log(process.env.REACT_APP_GMAIL_PASSWORD);
-
 const Home = () => {
   return (
     <Layout>

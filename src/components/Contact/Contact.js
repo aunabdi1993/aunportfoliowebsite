@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import axios from "axios";
+import axios from "axios";  
+
 
 import {
   Section,
@@ -31,26 +32,51 @@ class contact extends React.Component {
 
   // SUBMIT FORM
 
-  handleFormSubmit(event) {
-    // console.log(this.state);
-
-    // Create a new XMLHttpRequest
-    const xhr = new XMLHttpRequest();
-
-    // Get the callback when the server responds
-    xhr.addEventListener("load", () => {
-      // Update the email Status with the response
-      console.log(xhr.responseText);
-
-    });
-
-    xhr.open('GET', 'http://aunabdi.dev/index.php?sendto=' + email + '&fname=' + fname + '&lname=' + lname + '&message=' + message);
-
-    // Send the request
-    xhr.send();
+  handleFormSubmit = (event) =>{
 
     event.preventDefault();
-  }
+
+    console.log('Sending')
+
+    let data = {
+      fname: this.state.fname,
+      lname: this.state.lname,
+      email: this.state.email,
+      message: this.state.message,
+    };
+
+    console.log(data);
+
+    fetch('/api/contact', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    }).then((res) => {
+      console.log('Response received')
+      if (res.status === 200) {
+        console.log('Response succeeded!')
+        fetch('/api/contact', {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json, text/plain, */*',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data)
+  }).then((res) => {
+    console.log('Response received')
+    if (res.status === 200) {
+      console.log('Response succeeded!')
+    }
+  })
+      }
+    })
+
+    
+  };
+  
 
   render() {
     return (
