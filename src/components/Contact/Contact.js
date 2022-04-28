@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import axios from "axios";  
+import Swal from 'sweetalert2';
 
 
 import {
@@ -30,9 +30,10 @@ class contact extends React.Component {
     });
   };
 
+
   // SUBMIT FORM
 
-  handleFormSubmit = (event) =>{
+  handleFormSubmit = (event) => {
 
     event.preventDefault();
 
@@ -68,7 +69,13 @@ class contact extends React.Component {
   }).then((res) => {
     console.log('Response received')
     if (res.status === 200) {
-      console.log('Response succeeded!')
+      Swal.fire(
+        'Thank you!',
+        'Your message has been received. I will get back to you as soon as possible.',
+        'success'
+      )
+
+
     }
   })
       }
