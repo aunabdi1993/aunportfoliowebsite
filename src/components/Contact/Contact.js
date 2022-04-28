@@ -91,7 +91,7 @@ class contact extends React.Component {
         <SectionTitle>Contact Me</SectionTitle>
         <SectionText>Use the form below to contact me.</SectionText>
         <div>
-          <form action="#">
+          <form action="/api/contact">
             <label>First Name</label>
             <input
               type="text"
