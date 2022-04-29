@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import React from 'react';
 import { AiFillGithub, AiFillInstagram, AiFillLinkedin, AiFillYoutube, AiOutlineAudio } from 'react-icons/ai';
-import { DiCssdeck } from 'react-icons/di';
 
 import { Container, Div1, Div2, Div3, NavLink, SocialIcons, Span } from './HeaderStyles';
+import LinkSmoothScroll from './LinkSmoothScroll';
 
 const Header = () =>  (
   <Container>
@@ -16,19 +16,24 @@ const Header = () =>  (
     </Div1>
     <Div2>
       <li>
-        <Link href="#projects">
+        <LinkSmoothScroll href="#projects">
           <NavLink>Projects</NavLink>
-        </Link>
+        </LinkSmoothScroll>
       </li>
       <li>
-        <Link href="#tech">
+        <LinkSmoothScroll href="#tech">
           <NavLink>Technologies</NavLink>
-        </Link>
+        </LinkSmoothScroll>
       </li>
       <li>
-        <Link href="#about">
+        <LinkSmoothScroll href="#about">
           <NavLink>About</NavLink>
-        </Link>
+        </LinkSmoothScroll>
+      </li>
+      <li>
+        <LinkSmoothScroll href="#contact">
+          <NavLink>Contact</NavLink>
+        </LinkSmoothScroll>
       </li>
     </Div2>
     <Div3>

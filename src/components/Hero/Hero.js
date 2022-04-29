@@ -15,7 +15,7 @@ const Hero = (props) => (
         Welcome to my Portfolio Website. 
       </SectionTitle>
       <SectionText>
-        I'm a Full-Stack Developer aspiring to create the most beautiful and well-structured web applications possible. 
+        I'm a Full-Stack Developer aspiring to create the most beautiful and well-structured web applications possible.
       </SectionText>
       <Button onClick={() => window.location = '#projects'}>
         Learn More

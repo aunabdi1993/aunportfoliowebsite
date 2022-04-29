@@ -56,6 +56,11 @@ class contact extends React.Component {
       },
       body: JSON.stringify(data)
     }).then((res) => {
+      Swal.fire({
+        title: 'Processing...',
+        width: 600,
+        padding: '3em',
+      })
       if (res.status === 200) {
         fetch('/api/contact', {
     method: 'POST',
@@ -95,6 +100,7 @@ class contact extends React.Component {
               id="fname"
               name="firstname"
               placeholder="Your name.."
+              required
               value={this.state.fname}
               onChange={(e) => this.setState({ fname: e.target.value })}
             />
@@ -103,6 +109,7 @@ class contact extends React.Component {
               type="text"
               id="lname"
               name="lastname"
+              required
               placeholder="Your last name.."
               value={this.state.lname}
               onChange={(e) => this.setState({ lname: e.target.value })}
@@ -113,6 +120,7 @@ class contact extends React.Component {
               type="email"
               id="email"
               name="email"
+              required
               placeholder="Your email"
               value={this.state.email}
               onChange={(e) => this.setState({ email: e.target.value })}
@@ -122,6 +130,7 @@ class contact extends React.Component {
             <textarea
               id="message"
               name="message"
+              required
               placeholder="Write something.."
               onChange={(e) => this.setState({ message: e.target.value })}
               value={this.state.message}

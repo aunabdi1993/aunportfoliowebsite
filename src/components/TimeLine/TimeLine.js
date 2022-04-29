@@ -46,7 +46,9 @@ const Timeline = () => {
     <Section id="about">
       <SectionTitle>About Me</SectionTitle>
       <SectionText>
-        After working in Finance & Accounting I decided to learn web-development to enhance my career and creativity. 
+        After working in the Civil Service, as well as working as a Business Analyst, I decided to learn how to code after creating some projects of my own. I have a diverse range of interests and skills, which combined have helped shaped my career.
+        <br />
+
       </SectionText>
       <CarouselContainer ref={carouselRef} onScroll={handleScroll}>
         <>
@@ -113,6 +115,9 @@ const Timeline = () => {
           </CarouselButton>       
         ))}
       </CarouselButtons>
+      <SectionText>
+        For more information about my experience, skills and projects download my resume.
+      </SectionText>
     </Section>
   );
 };

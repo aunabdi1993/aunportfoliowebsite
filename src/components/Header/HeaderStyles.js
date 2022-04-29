@@ -6,8 +6,13 @@ export const Container = styled.div`
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: 1fr;
   grid-column-gap: 2rem;
-  padding: 1rem;
+  padding: 3rem;
   padding-top: 2rem;
+  position: fixed;
+  height: 80px;
+  background-color: ${props => props.theme.colors.background1};
+  z-index: 1;
+
 
   @media ${(props) => props.theme.breakpoints.sm} {
     display: grid;
@@ -15,6 +20,10 @@ export const Container = styled.div`
     grid-template-rows: repeat(2, 60px);
     grid-column-gap: 0.5rem;
     grid-row-gap: 0.5rem;
+    position: fixed;
+  height: 150px;
+  background-color: ${props => props.theme.colors.background1};
+  z-index: 100;
   }
 `;
 
@@ -53,6 +62,7 @@ export const Div3 = styled.div`
 // Navigation Links
 export const NavLink = styled.a`
   font-size: 2rem;
+  padding: 0.5rem;
   line-height: 32px;
   color: rgba(255, 255, 255, 0.75);
   transition: 0.4s ease;
