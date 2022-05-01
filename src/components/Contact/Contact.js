@@ -35,14 +35,14 @@ class contact extends React.Component {
   handleFormSubmit = (event) => {
     event.preventDefault();
 
-    console.log("Sending");
-
     let data = {
       fname: this.state.fname,
       lname: this.state.lname,
       email: this.state.email,
       message: this.state.message,
     };
+
+    // FUNCTION TO CLEAR FORM 
 
     function clearThis() {
      document.getElementById("fname").value = "";
@@ -51,20 +51,20 @@ class contact extends React.Component {
      document.getElementById("message").value = "";
     };
 
-    fetch("/api/contact", {
-      method: "POST",
-      headers: {
-        Accept: "application/json, text/plain, */*",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    }).then((res) => {
-      Swal.fire({
-        title: "Processing...",
-        width: 600,
-        padding: "3em",
-      });
-      if (res.status === 200) {
+    // FORM VALIDATION
+
+      var fname = document.forms["contact"]["fname"].value;
+      var lname = document.forms["contact"]["lname"].value;
+      var email = document.forms["contact"]["email"].value;
+      var message = document.forms["contact"]["message"].value;
+      if (fname == "" || lname == "" || email == "" || message == "") {
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Please fill in all fields!",
+        })
+        return false;
+      } else {
         fetch("/api/contact", {
           method: "POST",
           headers: {
@@ -73,17 +73,33 @@ class contact extends React.Component {
           },
           body: JSON.stringify(data),
         }).then((res) => {
+          Swal.fire({
+            title: "Processing...",
+            width: 600,
+            padding: "3em",
+          });
           if (res.status === 200) {
-            Swal.fire(
-              "Thank you!",
-              "Your message has been received. I will get back to you as soon as possible.",
-              "success"
-            );
+            fetch("/api/contact", {
+              method: "POST",
+              headers: {
+                Accept: "application/json, text/plain, */*",
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(data),
+            }).then((res) => {
+              if (res.status === 200) {
+                Swal.fire(
+                  "Thank you!",
+                  "Your message has been received. I will get back to you as soon as possible.",
+                  "success"
+                );
+              }
+            });
+            clearThis();
           }
         });
-        clearThis();
+
       }
-    });
   };
 
   render() {
@@ -96,7 +112,7 @@ class contact extends React.Component {
         <SectionTitle>Contact</SectionTitle>
         <SectionText>Use the form below to contact me.</SectionText>
         <div>
-          <form id="contact" action="/api/contact">
+          <form name="contact" action="/api/contact">
             <label>First Name</label>
             <input
               type="text"
