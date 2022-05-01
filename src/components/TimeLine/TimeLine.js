@@ -1,8 +1,31 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from "react";
 
-import { CarouselButton, CarouselButtonDot, CarouselButtons, CarouselContainer, CarouselItem, CarouselItemImg, CarouselItemText, CarouselItemTitle, CarouselMobileScrollNode } from './TimeLineStyles';
-import { Section, SectionDivider, SectionText, SectionTitle } from '../../styles/GlobalComponents';
-import { TimeLineData } from '../../constants/constants';
+import {
+  CarouselButton,
+  CarouselButtonDot,
+  CarouselButtons,
+  CarouselContainer,
+  CarouselItem,
+  CarouselItemImg,
+  CarouselItemText,
+  CarouselItemTitle,
+  CarouselMobileScrollNode,
+} from "./TimeLineStyles";
+import {
+  Section,
+  SectionDivider,
+  SectionText,
+  SectionTitle,
+} from "../../styles/GlobalComponents";
+import { TimeLineData } from "../../constants/constants";
+import Button from "../../styles/GlobalComponents/Button";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useHref
+} from "react-router-dom";
 
 const TOTAL_CAROUSEL_COUNT = TimeLineData.length;
 
@@ -11,49 +34,60 @@ const Timeline = () => {
   const carouselRef = useRef();
 
   const scroll = (node, left) => {
-    return node.scrollTo({ left, behavior: 'smooth' });
-  }
+    return node.scrollTo({ left, behavior: "smooth" });
+  };
 
   const handleClick = (e, i) => {
     e.preventDefault();
 
     if (carouselRef.current) {
-      const scrollLeft = Math.floor(carouselRef.current.scrollWidth * 0.7 * (i / TimeLineData.length));
-      
+      const scrollLeft = Math.floor(
+        carouselRef.current.scrollWidth * 0.7 * (i / TimeLineData.length)
+      );
+
       scroll(carouselRef.current, scrollLeft);
     }
-  }
+  };
 
   const handleScroll = () => {
     if (carouselRef.current) {
-      const index = Math.round((carouselRef.current.scrollLeft / (carouselRef.current.scrollWidth * 0.7)) * TimeLineData.length);
+      const index = Math.round(
+        (carouselRef.current.scrollLeft /
+          (carouselRef.current.scrollWidth * 0.7)) *
+          TimeLineData.length
+      );
 
       setActiveItem(index);
     }
-  }
+  };
 
   // snap back to beginning of scroll when window is resized
   // avoids a bug where content is covered up if coming from smaller screen
   useEffect(() => {
     const handleResize = () => {
       scroll(carouselRef.current, 0);
-    }
+    };
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
   }, []);
 
   return (
     <Section id="about">
       <SectionTitle>About Me</SectionTitle>
       <SectionText>
-        After working in the Civil Service, as well as working as a Business Analyst, I decided to learn how to code after creating some projects of my own. I have a diverse range of interests and skills, which combined have helped shaped my career.
+        After working in the Civil Service, as well as working as a Business
+        Analyst, I decided to learn how to code after creating some projects of
+        my own. I have a diverse range of interests and skills, which combined
+        have helped shaped my career.
         <br />
-
       </SectionText>
-      <CarouselContainer ref={carouselRef} onScroll={handleScroll}>
+      <CarouselContainer ref={carouselRef} onSc roll={handleScroll}>
         <>
           {TimeLineData.map((item, index) => (
-            <CarouselMobileScrollNode key={index} final={index === TOTAL_CAROUSEL_COUNT - 1}>
+            <CarouselMobileScrollNode
+              key={index}
+              final={index === TOTAL_CAROUSEL_COUNT - 1}
+            >
               <CarouselItem
                 index={index}
                 id={`carousel__item-${index}`}
@@ -68,7 +102,8 @@ const Timeline = () => {
                     height="6"
                     viewBox="0 0 208 6"
                     fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
                     <path
                       fill-rule="evenodd"
                       clip-rule="evenodd"
@@ -83,7 +118,8 @@ const Timeline = () => {
                         y1="0.5"
                         x2="208"
                         y2="0.500295"
-                        gradientUnits="userSpaceOnUse">
+                        gradientUnits="userSpaceOnUse"
+                      >
                         <stop stop-color="white" />
                         <stop
                           offset="0.79478"
@@ -94,9 +130,7 @@ const Timeline = () => {
                     </defs>
                   </CarouselItemImg>
                 </CarouselItemTitle>
-                <CarouselItemText>
-                  {item.text}
-                </CarouselItemText>
+                <CarouselItemText>{item.text}</CarouselItemText>
               </CarouselItem>
             </CarouselMobileScrollNode>
           ))}
@@ -104,7 +138,7 @@ const Timeline = () => {
       </CarouselContainer>
       <CarouselButtons>
         {TimeLineData.map((item, index) => (
-          <CarouselButton 
+          <CarouselButton
             key={index}
             index={index}
             acive={activeItem}
@@ -112,12 +146,16 @@ const Timeline = () => {
             type="button"
           >
             <CarouselButtonDot active={activeItem} />
-          </CarouselButton>       
+          </CarouselButton>
         ))}
       </CarouselButtons>
       <SectionText>
-        For more information about my experience, skills and projects download my resume.
+        For more information about my experience, skills and projects download
+        my resume.
       </SectionText>
+      <Button>
+      <a href = "https://drive.google.com/file/d/1jmIgHUmH1Q9Vda7Iw6BQ8SVNRNOdQ1o7/view?usp=sharing" target = "_blank" download> Download CV</a>
+      </Button>
     </Section>
   );
 };
