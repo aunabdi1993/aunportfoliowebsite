@@ -7,6 +7,7 @@ import { CompanyContainer, FooterWrapper, LinkColumn, LinkItem, LinkList, LinkTi
 const Footer = () => {
   return (
     <FooterWrapper>
+      
       <SocialIconsContainer>
         <CompanyContainer>
           <Slogan>“Imagination is the beginning of creation. You imagine what you desire, you will what you imagine, and at last, you create what you will.” <br /><br />George Bernard Shaw</Slogan>

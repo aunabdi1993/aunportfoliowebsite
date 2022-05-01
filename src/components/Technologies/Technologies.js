@@ -13,30 +13,30 @@ const Technologies = () =>  (
      <SectionText>I've worked with a range of technologies in web-development. From back-end, to front-end as well as design.</SectionText>
   <List>
     <ListItem>
-      <DiReact size="3rem" />
+      <DiReact color= "white" size="4rem" />
       <br />
       <ListContainer>
         <ListTitle>Front-end</ListTitle>
         <ListParagraph>Experience with <br />
-        HTML, CSS, jQuery, React.js <br /> and Next.js</ListParagraph>
+        HTML, CSS, React.js, jQuery<br /> and Next.js</ListParagraph>
       </ListContainer>
     </ListItem>
     <ListItem>
-      <DiFirebase size="3rem" />
+      <DiFirebase color= "white" size="4rem" />
       <br />
       <ListContainer>
         <ListTitle>Back-end</ListTitle>
         <ListParagraph>Experience with <br />
-        Node.js, PHP, SQL, Supabase <br /> & Firebase</ListParagraph>
+        Node.js, Python,PHP, SQL</ListParagraph>
       </ListContainer>
     </ListItem>
     <ListItem>
-      <DiZend size="3rem" />
+      <DiZend color= "white" size="4rem" />
       <br />
       <ListContainer>
         <ListTitle>UI/UX</ListTitle>
         <ListParagraph>Experience with <br />
-        tools like UXPin & Figma</ListParagraph>
+        tools like Adobe CS & UXPin </ListParagraph>
       </ListContainer>
     </ListItem>
   </List>
