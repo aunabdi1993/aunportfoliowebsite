@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import Swal from 'sweetalert2';
+import Swal from "sweetalert2";
 import Button from "../../styles/GlobalComponents/Button";
-
 
 import {
   Section,
@@ -31,14 +30,12 @@ class contact extends React.Component {
     });
   };
 
-
   // SUBMIT FORM
 
   handleFormSubmit = (event) => {
-
     event.preventDefault();
 
-    console.log('Sending')
+    console.log("Sending");
 
     let data = {
       fname: this.state.fname,
@@ -47,58 +44,59 @@ class contact extends React.Component {
       message: this.state.message,
     };
 
-    console.log(data);
+    function clearThis() {
+     document.getElementById("fname").value = "";
+     document.getElementById("lname").value = "";
+     document.getElementById("email").value = "";
+     document.getElementById("message").value = "";
+    };
 
-    fetch('/api/contact', {
-      method: 'POST',
+    fetch("/api/contact", {
+      method: "POST",
       headers: {
-        'Accept': 'application/json, text/plain, */*',
-        'Content-Type': 'application/json'
+        Accept: "application/json, text/plain, */*",
+        "Content-Type": "application/json",
       },
-      body: JSON.stringify(data)
+      body: JSON.stringify(data),
     }).then((res) => {
       Swal.fire({
-        title: 'Processing...',
+        title: "Processing...",
         width: 600,
-        padding: '3em',
-      })
+        padding: "3em",
+      });
       if (res.status === 200) {
-        fetch('/api/contact', {
-    method: 'POST',
-    headers: {
-      'Accept': 'application/json, text/plain, */*',
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(data)
-  }).then((res) => {
-    if (res.status === 200) {
-      Swal.fire(
-        'Thank you!',
-        'Your message has been received. I will get back to you as soon as possible.',
-        'success'
-      )
-
-
-    }
-  })
+        fetch("/api/contact", {
+          method: "POST",
+          headers: {
+            Accept: "application/json, text/plain, */*",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        }).then((res) => {
+          if (res.status === 200) {
+            Swal.fire(
+              "Thank you!",
+              "Your message has been received. I will get back to you as soon as possible.",
+              "success"
+            );
+          }
+        });
+        clearThis();
       }
-    })
-
-    
+    });
   };
-  
 
   render() {
     return (
       <Section id="contact">
         <SectionDivider />
         <br />
-    <br />
-    <br />
+        <br />
+        <br />
         <SectionTitle>Contact</SectionTitle>
         <SectionText>Use the form below to contact me.</SectionText>
         <div>
-          <form action="/api/contact">
+          <form id="contact" action="/api/contact">
             <label>First Name</label>
             <input
               type="text"
@@ -140,11 +138,13 @@ class contact extends React.Component {
               onChange={(e) => this.setState({ message: e.target.value })}
               value={this.state.message}
             ></textarea>
-            <Button type="submit"
+            <Button
+              type="submit"
               onClick={(e) => this.handleFormSubmit(e)}
-              value="Submit">
-                Submit
-              </Button>
+              value="Submit"
+            >
+              Submit
+            </Button>
           </form>
         </div>
       </Section>
