@@ -7,9 +7,7 @@ export const Container = styled.div`
   grid-template-rows: 1fr;
   grid-column-gap: 2rem;
   padding: 3rem;
-  padding-top: 2rem;
   position: fixed;
-  height: 80px;
   background-color: ${props => props.theme.colors.background1};
   z-index: 1;
 

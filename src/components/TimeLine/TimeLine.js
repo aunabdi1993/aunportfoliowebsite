@@ -73,6 +73,10 @@ const Timeline = () => {
 
   return (
     <Section id="about">
+      <SectionDivider />
+      <br />
+    <br />
+    <br />
       <SectionTitle>About Me</SectionTitle>
       <SectionText>
         After working in the Civil Service, as well as working as a Business
@@ -150,12 +154,12 @@ const Timeline = () => {
         ))}
       </CarouselButtons>
       <SectionText>
-        For more information about my experience, skills and projects download
-        my resume.
+        For more information about my experience, skills and projects view my 
       </SectionText>
-      <Button>
-      <a href = "https://drive.google.com/file/d/1jmIgHUmH1Q9Vda7Iw6BQ8SVNRNOdQ1o7/view?usp=sharing" target = "_blank" download> Download CV</a>
-      </Button>
+      <a href = "https://drive.google.com/file/d/1jmIgHUmH1Q9Vda7Iw6BQ8SVNRNOdQ1o7/view?usp=sharing" target = "_blank" download>
+        <Button>View CV</Button>
+      </a>
+
     </Section>
   );
 };

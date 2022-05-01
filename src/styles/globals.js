@@ -32,6 +32,10 @@ const GlobalStyles = createGlobalStyle`
     list-style: none;
   }
 
+  label {
+    color: white;
+  }
+
   input[type=text],input[type=email], select, textarea {
      width: 100%;
      padding: 12px;
@@ -41,17 +45,6 @@ const GlobalStyles = createGlobalStyle`
      margin-top: 6px;
      margin-bottom: 16px;
      resize: vertical;
-}
- input[type=submit] {
-     background-color: rgb(83, 141, 234);
-     color: white;
-     padding: 12px 20px;
-     border: none;
-     border-radius: 4px;
-     cursor: pointer;
-}
- input[type=submit]:hover {
-     background-color: rgb(83, 141, 234);
 }
 
 `;

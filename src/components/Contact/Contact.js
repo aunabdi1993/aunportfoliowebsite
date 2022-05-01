@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Swal from 'sweetalert2';
+import Button from "../../styles/GlobalComponents/Button";
 
 
 import {
@@ -89,7 +90,11 @@ class contact extends React.Component {
 
   render() {
     return (
-      <Section>
+      <Section id="contact">
+        <SectionDivider />
+        <br />
+    <br />
+    <br />
         <SectionTitle>Contact Me</SectionTitle>
         <SectionText>Use the form below to contact me.</SectionText>
         <div>
@@ -135,11 +140,11 @@ class contact extends React.Component {
               onChange={(e) => this.setState({ message: e.target.value })}
               value={this.state.message}
             ></textarea>
-            <input
-              type="submit"
+            <Button type="submit"
               onClick={(e) => this.handleFormSubmit(e)}
-              value="Submit"
-            />
+              value="Submit">
+                Submit
+              </Button>
           </form>
         </div>
       </Section>
