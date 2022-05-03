@@ -1,6 +1,6 @@
 export const projects = [
   {
-    title: 'Gazeteer',
+    title: 'Gazetteer',
     description: "Using Javascript, PHP, Leaflet Maps, Bootstrap and Multiple API's this app displays visual data based on a specific location.",
     image: 'https://user-images.githubusercontent.com/79595630/160298423-d5e86db3-5a66-42d3-a61c-8a96bf345420.png',
     tags: ['Javascript', 'PHP', 'REST API'],
@@ -18,7 +18,7 @@ export const projects = [
     id: 1,
   },
   {
-    title: 'Basic Todo List',
+    title: 'To Do List',
     description:"This is a basic todo list app that allows the user to add, delete and edit tasks.",
     image: 'https://user-images.githubusercontent.com/79595630/159517973-580cd62b-b380-4dd2-b85f-e1fb464e2fb6.png',
     tags: ['React.js', 'Javascript'],
