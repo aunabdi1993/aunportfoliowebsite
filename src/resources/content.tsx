@@ -2,14 +2,13 @@ import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/
 import { Line, Logo, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
+  firstName: "Aun",
+  lastName: "Abdi",
+  name: `Aun Abdi`,
+  role: "Full-Stack Software Engineer",
   avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  email: "aabdidevelopment@gmail.com",
+  location: "Europe/London",
 };
 
 const newsletter: Newsletter = {
@@ -19,22 +18,15 @@ const newsletter: Newsletter = {
 };
 
 const social: Social = [
-  // Links are automatically displayed.
-  // Import new icons in /once-ui/icons.ts
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system",
+    link: "https://github.com/aunabdi1993",
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
-  },
-  {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
+    link: "https://www.linkedin.com/in/aun-abdi-50785780/",
   },
   {
     name: "Email",
@@ -49,9 +41,9 @@ const home: Home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>Writing code, reading ideas</>,
   featured: {
-    display: true,
+    display: false,
     title: (
       <Row gap="12" vertical="center">
         <strong className="ml-4">Once UI</strong>{" "}
@@ -65,14 +57,8 @@ const home: Home = {
   },
   subline: (
     <>
-      I'm Selene, a design engineer at{" "}
-      <Logo
-        dark
-        icon="/trademarks/wordmark-dark.svg"
-        style={{ display: "inline-flex", top: "0.25em", marginLeft: "-0.25em" }}
-      />
-      , where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
+        <br />
+        I'm Aun, a full-stack engineer who crafts scalable software and dives into books to fuel new perspectives.
     </>
   ),
 };
@@ -98,9 +84,8 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+      <br />
+        Hi I'm Aun, a UK-based full-stack software engineer with a passion for building secure, scalable systems and intuitive digital products. My work spans payment platforms, API integrations, and personal projects at the intersection of technology, reading, and curiosity.
       </>
     ),
   },
@@ -109,59 +94,62 @@ const about: About = {
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
+        company: "Webexpenses",
         timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        role: "Full Stack Software Engineer",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Delivered secure, scalable payment solutions by leading card programme integrations with Adyen and enhancing Wise-powered services for improved reliability.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Drove compliance and security through successful PCI DSS–compliant migration of sensitive card data, designing robust storage architecture and services.
+          </>,
+        <>
+          Enhanced system performance and consistency by creating a reusable HTTP module to standardise API requests across multiple services.
+        </>,
+          <>
+            Accelerated product delivery by collaborating across teams to replace third-party systems with in-house solutions, designing APIs and integrations under tight deadlines.
           </>,
         ],
         images: [
-          // optional: leave the array empty if you don't want to display images
           {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
+            src: "/images/webexpenses.png",
+            alt: "Webexpenses",
             width: 16,
             height: 9,
           },
         ],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
-        achievements: [
-          <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
-          </>,
-          <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
-          </>,
-        ],
-        images: [],
+        company: "Wentworth Golf Club",
+        timeframe: "2019-2020",
+        role: "Business Analyst",
+        achievements: [],
       },
+    {
+      company: "Civil Service Fast Stream",
+      timeframe: "2016-2019",
+      role: "Finance Graduate",
+      achievements: [],
+    },
     ],
   },
   studies: {
-    display: true, // set to false to hide this section
+    display: true,
     title: "Studies",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "University of London, City",
+        description: <>MSc Computer Science and AI | 2024-2026</>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "IT Career Switch",
+        description: <>Online coding traineeship | 2021-2022</>,
       },
+        {
+          name: "University of Southampton",
+          description: <>BSc Politics | 2011-2014 | Achieved 2:1</>,
+        },
     ],
   },
   technical: {
@@ -169,37 +157,16 @@ const about: About = {
     title: "Technical skills",
     skills: [
       {
-        title: "Figma",
-        description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
-        ),
+        title: "Languages",
         tags: [
           {
             name: "Figma",
             icon: "figma",
           },
         ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
       },
       {
-        title: "Next.js",
-        description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
-        ),
+        title: "Frameworks",
         tags: [
           {
             name: "JavaScript",
@@ -214,16 +181,34 @@ const about: About = {
             icon: "supabase",
           },
         ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
+      },
+        {
+          title: "Cloud & DevOps",
+          tags: [
+            {
+              name: "Figma",
+              icon: "figma",
+            },
+          ],
+        },
           {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
+            title: "Databases",
+            tags: [
+              {
+                name: "Figma",
+                icon: "figma",
+              },
+            ],
           },
-        ],
-      },  
+            {
+              title: "Testing",
+              tags: [
+                {
+                  name: "Figma",
+                  icon: "figma",
+                },
+              ],
+            },
     ],
   },
 };
