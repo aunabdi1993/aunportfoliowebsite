@@ -7,8 +7,7 @@ const person: Person = {
   name: `Aun Abdi`,
   role: "Full-Stack Software Engineer",
   avatar: "/images/avatar.jpg",
-  email: "aabdidevelopment@gmail.com",
-  location: "Europe/London",
+  email: "aabdidevelopment@gmail.com"
 };
 
 const newsletter: Newsletter = {
@@ -67,7 +66,7 @@ const about: About = {
   path: "/about",
   label: "About",
   title: `About – ${person.name}`,
-  description: `Meet ${person.name}, ${person.role} from ${person.location}`,
+  description: `Meet ${person.name}, ${person.role}`,
   tableOfContent: {
     display: true,
     subItems: false,
@@ -160,8 +159,20 @@ const about: About = {
         title: "Languages",
         tags: [
           {
-            name: "Figma",
-            icon: "figma",
+            name: "Java",
+            icon: "java",
+          },
+      {
+            name: "Python",
+            icon: "python",
+          },
+        {
+            name: "Typescript",
+            icon: "typescript",
+          },
+        {
+            name: "Javascript",
+            icon: "javascript",
           },
         ],
       },
@@ -169,16 +180,20 @@ const about: About = {
         title: "Frameworks",
         tags: [
           {
-            name: "JavaScript",
-            icon: "javascript",
+            name: "Springboot",
+            icon: "springboot",
           },
           {
-            name: "Next.js",
-            icon: "nextjs",
+            name: "React",
+            icon: "react",
           },
           {
-            name: "Supabase",
-            icon: "supabase",
+            name: "Node.js",
+            icon: "node",
+          },
+          {
+            name: "Django",
+            icon: "django",
           },
         ],
       },
@@ -186,8 +201,16 @@ const about: About = {
           title: "Cloud & DevOps",
           tags: [
             {
-              name: "Figma",
-              icon: "figma",
+              name: "AWS",
+              icon: "aws",
+            },
+            {
+              name: "Azure Devops",
+              icon: "azure",
+            },
+            {
+              name: "Docker",
+              icon: "docker",
             },
           ],
         },
@@ -195,17 +218,33 @@ const about: About = {
             title: "Databases",
             tags: [
               {
-                name: "Figma",
-                icon: "figma",
+                name: "MySQL",
+                icon: "sql",
               },
+             {
+               name: "PostGreSQL",
+               icon: "postgres",
+             },
+            {
+                name: "MongoDB",
+                icon: "mongo",
+            },
             ],
           },
             {
               title: "Testing",
               tags: [
                 {
-                  name: "Figma",
-                  icon: "figma",
+                  name: "JUnit",
+                  icon: "junit",
+                },
+                {
+                  name: "Jest",
+                  icon: "jest",
+                },
+                {
+                  name: "Selenium",
+                  icon: "selenium",
                 },
               ],
             },
