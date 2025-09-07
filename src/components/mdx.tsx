@@ -1,6 +1,6 @@
 import { MDXRemote, MDXRemoteProps } from "next-mdx-remote/rsc";
 import React, { ReactNode } from "react";
-import { slugify as transliterate } from "transliteration";
+import { slugify as transliterateSlugify } from "transliteration";
 
 import {
   Heading,
@@ -77,12 +77,24 @@ function createImage({ alt, src, ...props }: MediaProps & { src: string }) {
   );
 }
 
-function slugify(str: string): string {
-  const strWithAnd = str.replace(/&/g, " and "); // Replace & with 'and'
-  return transliterate(strWithAnd, {
+/** Safely convert any ReactNode (including arrays/elements) to plain text */
+function nodeToString(node: React.ReactNode): string {
+  if (node == null || node === false) return "";
+  if (typeof node === "string" || typeof node === "number") return String(node);
+  if (Array.isArray(node)) return node.map(nodeToString).join("");
+  if (React.isValidElement(node)) return nodeToString(node.props.children);
+  return "";
+}
+
+/** Robust slug generator using transliteration + small pre/post normalization */
+function makeSlug(input: string): string {
+  const normalized = input.replace(/&/g, " and ");
+  const slug = transliterateSlugify(normalized, {
     lowercase: true,
-    separator: "-", // Replace spaces with -
-  }).replace(/\-\-+/g, "-"); // Replace multiple - with single -
+    separator: "-",
+    trim: true,
+  });
+  return slug.replace(/-+/g, "-"); // collapse multiple dashes
 }
 
 function createHeading(as: "h1" | "h2" | "h3" | "h4" | "h5" | "h6") {
@@ -90,7 +102,8 @@ function createHeading(as: "h1" | "h2" | "h3" | "h4" | "h5" | "h6") {
     children,
     ...props
   }: Omit<React.ComponentProps<typeof HeadingLink>, "as" | "id">) => {
-    const slug = slugify(children as string);
+    const text = nodeToString(children);
+    const slug = makeSlug(text);
     return (
       <HeadingLink marginTop="24" marginBottom="12" as={as} id={slug} {...props}>
         {children}
