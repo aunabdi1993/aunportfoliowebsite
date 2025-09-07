@@ -77,14 +77,19 @@ function createImage({ alt, src, ...props }: MediaProps & { src: string }) {
   );
 }
 
-/** Safely convert any ReactNode (including arrays/elements) to plain text */
 function nodeToString(node: React.ReactNode): string {
-  if (node == null || node === false) return "";
+  if (node == null || typeof node === "boolean") return "";
   if (typeof node === "string" || typeof node === "number") return String(node);
   if (Array.isArray(node)) return node.map(nodeToString).join("");
-  if (React.isValidElement(node)) return nodeToString(node.props.children);
+
+  if (React.isValidElement(node)) {
+    const el = node as React.ReactElement<{ children?: React.ReactNode }>;
+    return nodeToString(el.props?.children);
+  }
+
   return "";
 }
+
 
 /** Robust slug generator using transliteration + small pre/post normalization */
 function makeSlug(input: string): string {
