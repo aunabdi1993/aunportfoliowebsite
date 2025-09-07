@@ -8,7 +8,7 @@ const person: Person = {
   role: "Full-Stack Software Engineer",
   avatar: "/images/avatar.jpg",
   email: "aabdidevelopment@gmail.com",
-  location: "London, UK"
+  location: "Europe/London"
 };
 
 const newsletter: Newsletter = {
