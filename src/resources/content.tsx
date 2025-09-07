@@ -7,7 +7,8 @@ const person: Person = {
   name: `Aun Abdi`,
   role: "Full-Stack Software Engineer",
   avatar: "/images/avatar.jpg",
-  email: "aabdidevelopment@gmail.com"
+  email: "aabdidevelopment@gmail.com",
+  location: "London, UK"
 };
 
 const newsletter: Newsletter = {
