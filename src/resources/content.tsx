@@ -22,6 +22,16 @@ const social: Social = [
     icon: "linkedin",
     link: "https://www.linkedin.com/in/aun-abdi-50785780/",
   },
+ {
+    name: "YouTube",
+     icon: "youtube",
+     link: "https://www.youtube.com/@AunAbdi"
+ },
+    {
+        name: "Podcast",
+        icon: "podcast",
+        link: "https://www.youtube.com/channel/UCShjmLZLiMfnYs2Ea00IV5Q"
+    },
   {
     name: "Email",
     icon: "email",

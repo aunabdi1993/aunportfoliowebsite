@@ -44,7 +44,9 @@ import {
     FaReact,
     FaNodeJs,
     FaAws,
-    FaDocker
+    FaDocker,
+    FaYoutube,
+    FaMicrophoneAlt
 } from "react-icons/fa";
 
 import {
@@ -101,7 +103,9 @@ export const iconLibrary: Record<string, IconType> = {
   //testing
   junit: SiJunit5,
   jest: GiJesterHat,
-  selenium: SiSelenium
+  selenium: SiSelenium,
+  youtube: FaYoutube,
+  podcast: FaMicrophoneAlt
 };
 
 export type IconLibrary = typeof iconLibrary;
