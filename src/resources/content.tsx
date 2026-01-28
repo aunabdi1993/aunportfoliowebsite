@@ -144,7 +144,7 @@ const about: About = {
     institutions: [
       {
         name: "University of London, City",
-        description: <>MSc Computer Science and AI | 2024-2026</>,
+        description: <>MSc Computer Science and AI | Currently Studying</>,
       },
       {
         name: "IT Career Switch",
@@ -197,8 +197,8 @@ const about: About = {
             icon: "node",
           },
           {
-            name: "Django",
-            icon: "django",
+            name: "FastAPI",
+            icon: "fastapi",
           },
         ],
       },

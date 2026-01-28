@@ -29,7 +29,8 @@ import {
   SiDjango,
   SiPostgresql,
   SiJunit5,
-  SiSelenium
+  SiSelenium,
+  SiFastapi
 } from "react-icons/si";
 
 import {
@@ -91,7 +92,7 @@ export const iconLibrary: Record<string, IconType> = {
   springboot: SiSpringboot,
   react: FaReact,
   node: FaNodeJs,
-  django: SiDjango,
+  fastapi: SiFastapi,
   //cloud&devops
   aws: FaAws,
   azure: VscAzure,
