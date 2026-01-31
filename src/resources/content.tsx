@@ -97,9 +97,15 @@ const about: About = {
     display: true,
     title: "Work Experience",
     experiences: [
+        {
+            company: "Nominet",
+            timeframe: "2026 - Present",
+            role: "Software Engineer",
+            achievements: [],
+        },
       {
         company: "Webexpenses",
-        timeframe: "2022 - Present",
+        timeframe: "2022 - 2026",
         role: "Full Stack Software Engineer",
         achievements: [
           <>
@@ -114,14 +120,6 @@ const about: About = {
           <>
             Accelerated product delivery by collaborating across teams to replace third-party systems with in-house solutions, designing APIs and integrations under tight deadlines.
           </>,
-        ],
-        images: [
-          {
-            src: "/images/webexpenses.png",
-            alt: "Webexpenses",
-            width: 16,
-            height: 9,
-          },
         ],
       },
       {
