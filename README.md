@@ -1,6 +1,6 @@
 # Aun Abdi's Portfolio
 
-Personal portfolio website for Aun Abdi, a Full-Stack Software Engineer based in the UK. This site showcases my professional work, technical blog posts about reading and software development, and personal projects.
+Personal portfolio website for Aun Abdi, a Software Engineer based in the UK. This site showcases my professional work, technical blog posts about reading and software development, and personal projects.
 
 Built with Next.js 15, TypeScript, and Once UI design system.
 

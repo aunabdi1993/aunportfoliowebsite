@@ -5,7 +5,7 @@ const person: Person = {
   firstName: "Aun",
   lastName: "Abdi",
   name: `Aun Abdi`,
-  role: "Full-Stack Software Engineer",
+  role: "Software Engineer",
   avatar: "/images/avatar.jpg",
   email: "aabdidevelopment@gmail.com",
   location: "Europe/London"
@@ -62,7 +62,7 @@ const home: Home = {
   subline: (
     <>
         <br />
-        I'm Aun, a full-stack engineer who crafts scalable software and dives into books to fuel new perspectives.
+        I'm Aun, a software engineer who crafts scalable software and dives into books to fuel new perspectives.
     </>
   ),
 };
@@ -89,7 +89,7 @@ const about: About = {
     description: (
       <>
       <br />
-        Hi I'm Aun, a UK-based full-stack software engineer with a passion for building secure, scalable systems and intuitive digital products. My work spans payment platforms, API integrations, and personal projects at the intersection of technology, reading, and curiosity.
+        Hi I'm Aun, a UK-based software engineer with a passion for building secure, scalable systems and intuitive digital products. My work spans payment platforms, API integrations, and personal projects at the intersection of technology, reading, and curiosity.
       </>
     ),
   },

@@ -3,7 +3,6 @@ import {
   Button,
   Column,
   Heading,
-  Icon,
   IconButton,
   Media,
   Tag,
